@@ -1,4 +1,4 @@
-var User = require('../lib/mongo').User;
+let User = require('../lib/mongo').User;
 
 module.exports = {
     //注册一个账户

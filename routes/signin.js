@@ -1,9 +1,9 @@
-var sha1 = require('sha1');
-var express = require('express');
-var router = express.Router();
+let sha1 = require('sha1');
+let express = require('express');
+let router = express.Router();
 
-var UserModel = require('../models/users');
-var checkNotLogin = require('../middlewares/check').checkNotLogin;
+let UserModel = require('../models/users');
+let checkNotLogin = require('../middlewares/check').checkNotLogin;
 
 //GET //signin 登录
 router.get('/',checkNotLogin,function (req, res, next) {
@@ -11,8 +11,8 @@ router.get('/',checkNotLogin,function (req, res, next) {
 });
 //POST /signin用户登录
 router.post('/',checkNotLogin,function (req, res, next) {
-    var name = req.fields.name;
-    var password = req.fields.password;
+    let name = req.fields.name;
+    let password = req.fields.password;
 
     UserModel.getUserByName(name).then(function (user) {
       if(!user){

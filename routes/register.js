@@ -1,11 +1,11 @@
-var fs = require('fs');
-var path = require('path');
-var sha1 = require('sha1');
-var express = require('express');
-var router = express.Router();
+let fs = require('fs');
+let path = require('path');
+let sha1 = require('sha1');
+let express = require('express');
+let router = express.Router();
 
-var UserModel = require('../models/users');
-var checkNotLogin = require('../middlewares/check').checkNotLogin;
+let UserModel = require('../models/users');
+let checkNotLogin = require('../middlewares/check').checkNotLogin;
 
 //GET /register 注册页
 router.get('/',checkNotLogin,function (req, res, next) {
@@ -14,12 +14,12 @@ router.get('/',checkNotLogin,function (req, res, next) {
 
 //POST /register 用户注册
 router.post('/',checkNotLogin,function (req, res, next) {
-    var name = req.fields.name;
-    var gender = req.fields.gender;
-    var bio = req.fields.bio;
-    var avatar = req.files.avatar.path.split(path.sep).pop();
-    var password = req.fields.password;
-    var repassword = req.fields.repassword;
+    let name = req.fields.name;
+    let gender = req.fields.gender;
+    let bio = req.fields.bio;
+    let avatar = req.files.avatar.path.split(path.sep).pop();
+    let password = req.fields.password;
+    let repassword = req.fields.repassword;
 
     //校验参数
     try{
@@ -51,7 +51,7 @@ router.post('/',checkNotLogin,function (req, res, next) {
     password = sha1(password);
 
     //待写入数据库的用户信息
-    var user = {
+    let user = {
         name : name,
         password: password,
         gender: gender,

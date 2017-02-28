@@ -1,16 +1,16 @@
 /*-----全局样式-----*/
 body{
-    width:1500px;
+    width:1200px;
     height:100%;
     margin: 0 auto;
     padding-top:40px;
     /*background: url("../img/") no-repeat left;*/
 }
 a:hover{
-    border-bottom:3px solid #4fc08d;
+    border-bottom:3px solid #3a5898;
 }
 .button{
-    background-color:#4fc08d !important;
+    background-color:#3a5898 !important;
     color: #ffffff !important;
 }
 .avatar{
@@ -26,7 +26,7 @@ a:hover{
     text-align: center;
 }
 .nav h1{
-    color:#4fc08d;
+    color:#3a5898;
     display: inline-block;
     margin: 10px 0;
 }
@@ -47,7 +47,7 @@ a:hover{
 }
 /*-----post-content-----*/
 .post-content h3 a{
-    color: #4fc08d !important;
+    color: #3a5898 !important;
 }
 .post-content .tag{
     font-size: 13px;
