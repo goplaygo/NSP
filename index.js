@@ -12,6 +12,7 @@ let expressWinston = require('express-winston');
 
 let app = express();
 
+
 //设置模板目录
 app.set('views',path.join(__dirname,'views'));
 //设置模板为ejs
